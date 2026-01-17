@@ -38,26 +38,27 @@ python main.py
 
 Example:
 ```bash
-python main.py codellama:latest
+python main.py --model codellama:latest
 ```
 Example with a custom server:
 ```bash
-python main.py codellama:latest --endpoint_url http://your-server --port <your port number>
+python main.py --model codellama:latest --endpoint_url http://your-server --port <your port number>
 ```
 
 ### Command Line Options
 
-- `model`: (Required) The model name (e.g., 'codellama:latest', 'llama2:13b')
-- `--endpoint_url`: OpenAI-compatible server endpoint URL (default: http://localhost)
-- `--port`: OpenAI-compatible server port (default: 8000)
+- `--model`: The model name (default: meta-llama/Llama-3.3-70B-Instruct)
+- `--endpoint_url`: OpenAI-compatible server endpoint URL (default: eval.nxt.furiosa.ai)
+- `--port`: OpenAI-compatible server port (default: 24401)
+- `--log_level`: Logging level (default: ERROR)
 - `--min_token_rate`: Minimum acceptable tokens per second (default: 10)
 - `--start`: Starting context size (default: 1024)
 - `--step`: Step size for context increments (default: 1024)
-- `--tests`: Number of tests per context size (default: 3)
+- `--tests`: Number of tests per context size (default: 1)
 
 Example with all options:
 ```bash
-python main.py mistral:7b --min_token_rate 15 --start 2048 --step 2048 --tests 5
+python main.py --model mistral:7b --endpoint_url http://localhost --port 8000 --log_level INFO --min_token_rate 15 --start 2048 --step 2048 --tests 5
 ```
 
 ### Output
