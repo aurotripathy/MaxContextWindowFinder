@@ -1,4 +1,4 @@
-Note: Derived from https://github.com/Scionero/MaxContextFinder/tree/main with many simplifications and minor changed
+#### Note: Derived from https://github.com/Scionero/MaxContextFinder/tree/main with many simplifications and minor changes
 # OpenAI-Compatible LLM Server Context Window Size Discovery
 
 A tool to determine the maximum usable context size for models served from an OpenAI-compatible endpoint while monitoring performance. This tool helps you find the optimal balance between context size and performance for your specific hardware setup.
